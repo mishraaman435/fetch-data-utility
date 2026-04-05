@@ -1,0 +1,145 @@
+<section class="mainBaner">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-5">
+                <img src="assets/images/bannerimgEmployee.svg" class="w-100" alt="imgDost">
+
+            </div>
+            <div class="col-lg-7 col-md-7">
+                <h2 class="text-white mb-2">Access The Script<span class="yelowClr d-block"> without DBA</span></h2>
+                <p class="text-white">Just fill the form and search by clicking Execute Button</p>
+                <form [formGroup]="form" (ngSubmit)="onSubmit()" class="row cardWrap">
+                    <div class="col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <label><b>Technology:</b></label>
+                            <select class="form-control" #dropdownValue>
+                                <option selected disabled hidden value=''></option>
+                                <option value=1> Postgress</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <label><b>DataBase Name:</b></label>
+                            <select formControlName="Database" class="form-control" (change)="getSchemas();"
+                                [ngClass]="{ 'is-invalid': submitted && f.Database.errors }">
+                                <option selected disabled hidden value=''></option>
+                                <option *ngFor="let dpt of dbDTO" value="{{dpt.datname}}">
+                                    {{dpt.datname}}
+                                </option>
+                            </select>
+                            <div *ngIf="submitted && f.Database.errors" class="invalid-feedback">
+                                <div *ngIf="f.Database.errors.required">DataBase is required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="form-group">
+                            <label><b>Schema Name:</b></label>
+                            <select formControlName="Schema" class="form-control" (change)="onChangeSchema()"
+                                [ngClass]="{ 'is-invalid': submitted && f.Schema.errors }">
+                                <option selected disabled hidden value=''></option>
+                                <option *ngFor="let sch of schemaDTO" value="{{sch.schema_name}}">
+                                    {{sch.schema_name}}
+                                </option>
+                            </select>
+                            <div *ngIf="submitted && f.Schema.errors" class="invalid-feedback">
+                                <div *ngIf="f.Schema.errors.required">Schema is required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="form-group">
+                            <label><b>Script Type:</b></label>
+                            <select formControlName="qid" class="form-control" (change)="getFunctionViewList()"
+                                [ngClass]="{ 'is-invalid': submitted && f.qid.errors }">
+                                <option selected disabled hidden value=''></option>
+                                <option value=3>Function</option>
+                                <option value=7>Views</option>
+                            </select>
+                            <div *ngIf="submitted && f.qid.errors" class="invalid-feedback">
+                                <div *ngIf="f.qid.errors.required">Script type is required</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div *ngIf="srcflg" class="form-group">
+                            <label><b>{{scr}} Name:</b></label>
+                            <select formControlName="name" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                                <option selected disabled hidden value=''></option>
+                                <option *ngFor="let sch of funViewDTO" value="{{sch.scriptval}}">
+                                    {{sch.scriptval}}
+                                </option>
+                            </select>
+                            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                <div *ngIf="f.name.errors.required">{{scr}} Name is required</div>
+                            </div>
+                        </div>
+                        <div *ngIf="!srcflg">
+                            <span><strong>No {{scr}} availabe in this Schema</strong></span>
+                        </div>
+                    </div>
+                    <div class="col-md-12 d-flex">
+                        <a href="javascript:void(0)" mat-raised-button color="warn" class="mr-2"
+                            (click)="refresh(dropdownValue)">Reset</a>
+                        <button type="submit" mat-raised-button color="warn" mat-raised-button
+                            color="warning">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section *ngIf="!taflg" class="tableBox">
+    <div class="headerTOp p-3">
+        <h4 class="p-0 m-0">Data Query Box</h4>
+        <div class="ml-auto d-flex align-items-center">
+            <div class="succesMsg">
+                <div class="count-box">
+                    <div class="btn btn-sm btn-outline-success" style="margin-right: 10px; font-size: 14px;">
+                        DataBase: <span style="font-weight: bold">{{form.value.Database}}</span>
+                    </div>
+                </div>
+                <div class="count-box">
+                    <div class="btn btn-sm btn-outline-success" style="margin-right: 10px; font-size: 14px;">
+                        Schema: <span style="font-weight: bold">{{form.value.Schema}}</span>
+                    </div>
+                </div>
+                <div class="count-box">
+                    <div class="btn btn-sm btn-outline-success" style="margin-right: 10px; font-size: 14px;">
+                        {{scr}}: <span style="font-weight: bold">{{form.value.name}}</span>
+                    </div>
+                </div>
+                <button *ngIf="!taflg" class="btn btn-outline-primary btn-sm" (click)="copyToClipboard()"
+                    title="Copy to Clipboard">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-copy mr-2" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+                    </svg> <span>Copy to Clipboard</span>
+                </button>
+            </div>
+
+            <a href="javascript:void(0)" (click)="closeTable()">
+                <i class="closeBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path
+                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                    </svg>
+                </i>
+            </a>
+
+        </div>
+    </div>
+    <div class="tableWrap">
+        <textarea *ngIf="!taflg" id="textarea" [(ngModel)]="textareaContent" (input)="adjustTextareaHeight($event)"
+            disabled></textarea>
+    </div>
+
+
+</section>
