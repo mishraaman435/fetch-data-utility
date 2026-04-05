@@ -7,7 +7,7 @@ import * as CryptoJS from 'crypto-js';
 })
 export class EncryptionService {
 
-  private apiKey = '8hJd^mL2kQf6zU!vN3pR$bX5aWnYr7sC'; 
+  private apiKey = 'Your_token'; 
 
   encryptData(data: any): string {
     const key = CryptoJS.enc.Utf8.parse(this.apiKey);
