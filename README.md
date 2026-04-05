@@ -1,144 +1,27 @@
-# 🚀 Fetch Data Utility
+# FetchDataUtility
 
-> ⚠️ This is a personal project created for demonstration and learning purposes.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.18.
 
-A secure, read-only data retrieval system built using **.NET Core Web API**, **Angular**, and **PostgreSQL**.
-Designed to allow safe data access without exposing direct database connections or modification capabilities.
+## Development server
 
----
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## 📌 Project Overview
+## Code scaffolding
 
-Fetch Data Utility is a full-stack application that enables controlled data access through secure APIs.
-It allows users to fetch and analyze data without risking database integrity.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-The system is designed with a **read-only architecture**, ensuring that no direct database modifications are possible.
+## Build
 
----
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## ✨ Key Features
+## Running unit tests
 
-* 🔐 JWT-based authentication for secure API access
-* 📊 Read-only access via PostgreSQL **functions and views**
-* 🔒 Base64 encrypted request payloads
-* 📄 Swagger integration for API testing
-* 🚫 No direct database access from frontend
-* ⚡ Optimized API performance for faster data retrieval
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
----
+## Running end-to-end tests
 
-## 🛠️ Tech Stack
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-**Frontend**
+## Further help
 
-* Angular
-* TypeScript
-* Angular Material
-
-**Backend**
-
-* .NET Core Web API
-* C#
-
-**Database**
-
-* PostgreSQL
-
-**Tools**
-
-* Swagger
-* PgAdmin
-
----
-
-## 🏗️ Project Structure
-
-```
-backend/     → .NET Core API
-frontend/    → Angular UI
-database/    → SQL scripts (functions, views)
-```
-
----
-
-## ⚙️ Quick Setup
-
-### Backend
-
-cd backend/FetchDataUtility.API
-dotnet run
-
-### Frontend
-
-cd frontend/fetch-data-ui
-npm install
-ng serve
-
-### Database
-
-Run SQL scripts from `/database` folder
-
-> Note: Update connection string and JWT keys before running the project.
-
----
-
-## 🔑 Authentication Flow
-
-1. User logs in and receives a JWT token
-2. Token is sent in API request headers
-3. Backend validates token before processing request
-
----
-
-## 🔍 API Example
-
-### Request
-
-```
-POST /api/data/fetch
-Authorization: Bearer <token>
-
-{
-  "payload": "Base64EncodedString"
-}
-```
-
-### Response
-
-```
-{
-  "status": "success",
-  "data": [...]
-}
-```
-
----
-
-## 🔐 Security Design
-
-* Read-only database access using functions and views
-* No direct table exposure
-* JWT-based authentication
-* Encrypted request payload handling
-
----
-
-## 📈 Use Cases
-
-* Secure internal data sharing
-* Debugging without DB access
-* Reporting dashboards
-* Controlled API-based data access
-
----
-
-## 👨‍💻 Author
-
-**Aman Mishra**
-Full Stack Developer (.NET + Angular)
-
----
-
-## ⭐ Support
-
-If you found this project useful, consider giving it a ⭐ on GitHub!
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

@@ -1,0 +1,55 @@
+<div class="login-container">
+  <div class="cardWrap">
+    <div class="imgBox">
+      <img src="assets/images/dotsImg.svg" class="absoluteBotom" alt="images" />
+      <div class="imgWrp">
+        <h1>Let's Start <span class="d-block">Working</span> </h1>
+        <h5>Login and explore dataBase Data Easily..</h5>
+        <div class="text-center">
+          <img src="assets/images/working_bad.svg" alt="workingImg" />
+        </div>
+      </div>
+    </div>
+
+    <div class="loginBox">
+      <mat-card class="login-card">
+        <div class="logoBox">
+          <i class="logos">
+            <img src="assets/images/mp_logo.svg" alt="logo" />
+          </i>
+          <span>MPSSDI Data Fetch Utility<small>For GIS Development Team Members</small></span>
+        </div>
+
+        <mat-card-content>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="fill" class="full-width">
+              <mat-label>Username</mat-label>
+              <input placeholder="User Name" matInput formControlName="user_name">
+              <mat-error *ngIf="loginForm.get('user_name')?.hasError('required')">
+                Username is required
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="full-width">
+              <mat-label>Password</mat-label>
+              <input matInput type="password" formControlName="password">
+              <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+                Password is required
+              </mat-error>
+            </mat-form-field>
+            <div class="footerTxt">
+              <div class="button-group">
+                <a href="javascript:void(0)" mat-raised-button color="warn" type="button" (click)="onReset()">Reset</a>
+                <button [disabled]="sumbmit" mat-raised-button color="primary" class="ml-3" type="submit">Login</button>
+              </div>
+              <p class="text-right powerdLogo">
+                Powered by <a href="https://geoportal.mp.gov.in/geoportal/" target="_blank">MPSSDI</a> ,
+                <a href="https://mpsedc.mp.gov.in/" target="_blank">MPSEDC</a>
+              </p>
+            </div>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
