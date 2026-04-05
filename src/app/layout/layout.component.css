@@ -1,0 +1,209 @@
+/* Header CSS */
+.logos img {
+    max-height: 70px;
+    margin-right: 15px;
+}
+
+.logoBox.d-flex span {
+    color: #fff;
+}
+
+.logoBox.d-flex span small {
+    line-height: 1;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: rgb(89, 59, 255);
+    color: #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+}
+
+/* ========== DESKTOP/TABLET HORIZONTAL MENU ========== */
+.desktopMenu {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.menuHorizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+}
+
+.menuHorizontal li {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #fff;
+    font-family: semiBoldFont;
+    font-size: 13px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.menuHorizontal li:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.menuHorizontal li svg {
+    margin-right: 6px;
+    fill: #fff;
+}
+
+.menuHorizontal li span {
+    color: #fff;
+}
+
+/* ========== MOBILE DROPDOWN MENU ========== */
+.mobileOnly {
+    display: none;
+}
+
+.menu {
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 200px;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul svg {
+    margin-right: 10px;
+}
+
+.menu ul li {
+    padding: 8px 16px;
+    cursor: pointer;
+    color: #333;
+    font-family: semiBoldFont;
+}
+
+.menu ul li:hover {
+    background-color: #f1f1f1;
+}
+
+.menuBtn>a,
+.closeBtn {
+    position: relative;
+    margin-left: 25px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #fdc11f;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid rgb(45 7 252 / 25%);
+    cursor: pointer;
+}
+
+.txtBoxs h5,
+.txtBoxs h6 {
+    margin: 0;
+    padding: 0;
+    font-family: semiBoldFont;
+    font-size: 1.2rem !important;
+    line-height: 1;
+}
+
+.txtBoxs h6 {
+    font-size: 0.9rem !important;
+    opacity: 0.8;
+    font-family: regularFont;
+    line-height: 1;
+}
+
+.rightMenu {
+    display: flex;
+    align-items: center;
+}
+
+span.iconss {
+    margin-right: 10px;
+}
+
+.btn {
+    font-family: semiBoldFont;
+}
+
+/* ========== RESPONSIVE MEDIA QUERIES ========== */
+
+/* Tablet and above (768px and up) - Show horizontal menu, hide mobile menu */
+@media (min-width: 768px) {
+    .desktopMenu {
+        display: flex;
+    }
+
+    .mobileOnly {
+        display: none !important;
+    }
+}
+
+/* Mobile (below 768px) - Hide horizontal menu, show mobile dropdown */
+@media (max-width: 767px) {
+    .desktopMenu {
+        display: none;
+    }
+
+    .mobileOnly {
+        display: block;
+    }
+
+    .logoBox span {
+        display: none;
+    }
+
+    .logos img {
+        max-height: 50px;
+        margin-right: 5px;
+    }
+
+    .menuBtn a {
+        margin-left: 10px;
+    }
+
+    .txtBoxs h5 {
+        font-size: 1rem !important;
+    }
+
+    .txtBoxs h6 {
+        font-size: 0.8rem !important;
+    }
+}
+
+/* Large screens - more spacing */
+@media (min-width: 992px) {
+    .menuHorizontal {
+        gap: 8px;
+    }
+
+    .menuHorizontal li {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
