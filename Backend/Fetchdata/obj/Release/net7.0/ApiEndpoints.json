@@ -1,0 +1,178 @@
+[
+  {
+    "ContainingType": "Fetchdata.Controllers.HomeController",
+    "Method": "GetDataBase",
+    "RelativePath": "api/Home/GetDataBase",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "Model.Entities.EncryptedDataEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Fetchdata.Controllers.HomeController",
+    "Method": "GetFunctions",
+    "RelativePath": "api/Home/GetFunctionsOrViewsList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "Model.Entities.EncryptedDataEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Fetchdata.Controllers.HomeController",
+    "Method": "GetQuery",
+    "RelativePath": "api/Home/GetQuery",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "Model.Entities.EncryptedDataEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Fetchdata.Controllers.HomeController",
+    "Method": "GetSchemas",
+    "RelativePath": "api/Home/GetSchemas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "Model.Entities.EncryptedDataEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Fetchdata.Controllers.HomeController",
+    "Method": "GetScript",
+    "RelativePath": "api/Home/GetScript",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "Model.Entities.EncryptedDataEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Fetchdata.Controllers.HomeController",
+    "Method": "GetTable",
+    "RelativePath": "api/Home/GetTable",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "Model.Entities.EncryptedDataEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Fetchdata.Controllers.HomeController",
+    "Method": "GetTransaction",
+    "RelativePath": "api/Home/GetTransaction",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "Model.Entities.EncryptedDataEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Fetchdata.Controllers.LoginController",
+    "Method": "RegisterUser",
+    "RelativePath": "api/Login/InsertUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "Model.Entities.EncryptedDataEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Fetchdata.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "api/Login/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "Model.Entities.EncryptedDataEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Fetchdata.Controllers.MasterController",
+    "Method": "GetDesignation",
+    "RelativePath": "api/Master/GetDesignation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "Model.Entities.EncryptedDataEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Fetchdata.Controllers.MasterController",
+    "Method": "sendsmstocandidate",
+    "RelativePath": "api/Master/sendsmstocandidate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_InputParam",
+        "Type": "Model.Entities.SMSEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
