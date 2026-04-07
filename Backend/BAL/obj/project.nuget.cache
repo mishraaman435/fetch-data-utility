@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "Z0x+/gGaG8k=",
+  "success": true,
+  "projectFilePath": "D:\\MyProjects\\dotnetexm\\webcontrollers\\gridsol\\Fetchdata\\BAL\\BAL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AMAN_MISHRA\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
+    "C:\\Users\\AMAN_MISHRA\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\AMAN_MISHRA\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\AMAN_MISHRA\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\AMAN_MISHRA\\.nuget\\packages\\npgsql\\2.2.4.1\\npgsql.2.2.4.1.nupkg.sha512",
+    "C:\\Users\\AMAN_MISHRA\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Package 'Npgsql 2.2.4.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "projectPath": "D:\\MyProjects\\dotnetexm\\webcontrollers\\gridsol\\Fetchdata\\BAL\\BAL.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\MyProjects\\dotnetexm\\webcontrollers\\gridsol\\Fetchdata\\BAL\\BAL.csproj",
+      "libraryId": "Npgsql",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}
