@@ -12,10 +12,10 @@ namespace Utility
     public class SmsService
     {
 
-        static String username = "DITMP-MAPITH";
-        static String password = "MAPITH#123";
-        static String senderid = "MPSEDC";
-        static String secureKey = "6fefb4a1-e16a-402b-8bda-b6974d0efcdb";
+        static String username = "USER_NAME";
+        static String password = "PASSWORD";
+        static String senderid = "ABCD";
+        static String secureKey = "SECURITY_KEY";
         public string sendSingleSMS(string mobileNo, string message, string templateid)
 
         {
