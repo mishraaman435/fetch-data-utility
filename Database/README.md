@@ -1,4 +1,4 @@
-# MPSSDI Data Fetch Utility
+# Data Fetch Utility
 
 A secure and read-only data retrieval system built to streamline database access for users without allowing data modification.
 
