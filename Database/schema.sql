@@ -1,50 +1,14 @@
 CREATE SCHEMA IF NOT EXISTS gis_db_access_users;
 
 -- SEQUENCES
-CREATE SEQUENCE IF NOT EXISTS gis_db_access_users.candidate_id_seq1;
+-- CREATE SEQUENCE IF NOT EXISTS gis_db_access_users.candidate_id_seq1;
 CREATE SEQUENCE IF NOT EXISTS gis_db_access_users.designation_master_id_seq;
 CREATE SEQUENCE IF NOT EXISTS gis_db_access_users.querylogs_query_id_seq;
 CREATE SEQUENCE IF NOT EXISTS gis_db_access_users.users_comm_user_id_seq;
 
 -- TABLES
 
-CREATE TABLE gis_db_access_users.candidate (
-	id SERIAL PRIMARY KEY,
-	batch VARCHAR(50),
-	scheduled_date VARCHAR,
-	scheduled_time VARCHAR(50),
-	c_rank INT,
-	roll_no VARCHAR(50),
-	full_name VARCHAR(50),
-	email VARCHAR(50),
-	mobile_number BIGINT,
-	sms_send INT
-);
 
-CREATE TABLE gis_db_access_users.candidate_old (
-	id INT PRIMARY KEY,
-	batch VARCHAR(50),
-	scheduled_date DATE,
-	scheduled_time VARCHAR(50),
-	c_rank INT,
-	roll_no VARCHAR(50),
-	full_name VARCHAR(50),
-	email VARCHAR(50),
-	mobile_number BIGINT,
-	sms_send INT
-);
-
-CREATE TABLE gis_db_access_users.designation_master (
-	id SERIAL PRIMARY KEY,
-	designation VARCHAR NOT NULL
-);
-
-CREATE TABLE gis_db_access_users.querylogs (
-	query_id SERIAL PRIMARY KEY,
-	user_id INT,
-	query_val VARCHAR,
-	execution_time TIMESTAMP
-);
 
 CREATE TABLE gis_db_access_users.users_comm (
 	user_id SERIAL PRIMARY KEY,
@@ -61,6 +25,31 @@ CREATE TABLE gis_db_access_users.users_comm (
 	create_date TIMESTAMP,
 	roll INT,
 	designation INT
+);
+
+CREATE TABLE gis_db_access_users.designation_master (
+	id SERIAL PRIMARY KEY,
+	designation VARCHAR NOT NULL
+);
+
+CREATE TABLE gis_db_access_users.querylogs (
+	query_id SERIAL PRIMARY KEY,
+	user_id INT,
+	query_val VARCHAR,
+	execution_time TIMESTAMP
+);
+
+CREATE TABLE gis_db_access_users.candidate (
+	id SERIAL PRIMARY KEY,
+	batch VARCHAR(50),
+	scheduled_date VARCHAR,
+	scheduled_time VARCHAR(50),
+	c_rank INT,
+	roll_no VARCHAR(50),
+	full_name VARCHAR(50),
+	email VARCHAR(50),
+	mobile_number BIGINT,
+	sms_send INT
 );
 
 -- FUNCTION
