@@ -1,107 +1,158 @@
-Fetch Data Utility
 
-A secure full-stack data retrieval system built using .NET Core, Angular, and PostgreSQL.
+# 🚀 Fetch Data Utility
+
+A secure full-stack data retrieval system built using **.NET Core**, **Angular**, and **PostgreSQL**.
 
 This application allows users to safely fetch and explore database data without direct database access or risk of data modification.
 
---------------------------------------------------
+---
 
-PROJECT OVERVIEW
+## 📌 Project Overview
 
-Fetch Data Utility provides controlled, read-only access to database data through APIs.
+Fetch Data Utility provides **controlled, read-only access** to database data through APIs.
 
-Users can:
-- Execute only SELECT queries
-- Access functions, views, and stored procedures
-- Work in a secure and restricted environment
+It eliminates direct DB dependency and allows:
+- Executing only **SELECT queries**
+- Accessing **functions, views, and stored procedures**
+- Working in a **secure and restricted environment**
 
-This project was developed during my internship to solve real-world data access and debugging challenges.
+Developed during internship to solve real-world data access and debugging challenges.
 
---------------------------------------------------
+---
 
-FEATURES
+## ✨ Features
 
-- Secure API access using JWT authentication
-- Read-only architecture (no INSERT/UPDATE/DELETE)
-- Execute custom SELECT queries safely
-- Access database functions, views, stored procedures
-- Base64 encryption for request payloads
-- Swagger for API testing
+- 🔐 JWT-based secure API access  
+- 📊 Read-only architecture (no INSERT/UPDATE/DELETE)  
+- 🧠 Execute custom SELECT queries safely  
+- 📁 Access functions, views, stored procedures  
+- 🔒 Base64 encrypted request payload  
+- 📄 Swagger integration for API testing  
 
---------------------------------------------------
+---
 
-SCREENSHOTS
+## 🖼️ Screenshots
 
-Screenshot1 - Landing Page
-Screenshot2 - Script Viewer (Functions, Views, Stored Procedure)
-Screenshot3 - Query Executor 1
-Screenshot4 - Query Executor 2
-Screenshot5 - Query Executor 3
-Screenshot6 - Executed Query Viewer
+### 🔹 Landing Page
+![Landing Page](Screenshot1-Landing%20Page.png)
 
---------------------------------------------------
+### 🔹 Script Viewer
+![Script Viewer](Screenshot2-ScriptViewer(Function,%20View,%20Stored%20Procedure).png)
 
-TECH STACK
+### 🔹 Query Executor
+![Query 1](Screenshot3-QueryExecuter1.png)  
+![Query 2](Screenshot4-QueryExecuter2.png)  
+![Query 3](Screenshot5-QueryExecuter3.png)
 
-Frontend:
+### 🔹 Executed Query Viewer
+![Executed](Screenshot6-ExecutedQueryViewer.png)
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**
 - Angular 12
 - TypeScript
 
-Backend:
+**Backend**
 - .NET Core Web API
 - C#
 
-Database:
+**Database**
 - PostgreSQL
 
-Tools:
+**Tools**
 - Swagger
 - PgAdmin
 
---------------------------------------------------
+---
 
-SECURITY DESIGN
+## 🔐 Security Design
 
-- Only SELECT queries allowed
+- Only **SELECT queries allowed**
 - No direct database modification
 - API-level validation
-- Base64 encrypted payloads
+- Encrypted payload (Base64)
 - JWT authentication
 
---------------------------------------------------
+---
 
-SETUP INSTRUCTIONS
+## ⚙️ Setup Instructions
 
-1. Clone Repository
+### 1. Clone Repository
+```bash
 git clone https://github.com/your-username/fetch-data-utility.git
 cd fetch-data-utility
+````
 
-2. Backend Setup
+### 2. Backend Setup
+
+```bash
 cd backend
 dotnet restore
 dotnet run
+```
 
-Update connection string in appsettings.json
+Update connection string in:
 
-3. Frontend Setup
+```
+appsettings.json
+```
+
+### 3. Frontend Setup
+
+```bash
 cd frontend
 npm install
 ng serve
+```
 
-App runs on http://localhost:4200
+App runs on:
 
---------------------------------------------------
+```
+http://localhost:4200
+```
 
-USE CASES
+---
 
-- Secure data access
-- Debugging queries
-- Internal reporting tools
-- Controlled data sharing
+## 📈 Use Cases
 
---------------------------------------------------
+* Secure data access without DB exposure
+* Debugging queries safely
+* Internal reporting tools
+* Controlled data sharing
 
-AUTHOR
+---
 
-Aman Mishra
+## 👨‍💻 Author
+
+**Aman Mishra**
 Full Stack Developer (.NET Core + Angular)
+
+---
+
+## ⭐ If you like this project
+
+Give it a ⭐ and feel free to fork!
+
+````
+
+---
+
+# 🔥 IMPORTANT (screenshots issue fix)
+
+👉 Agar images nahi aa rahi:
+- ensure files **same folder me ho README ke**
+- exact same name hona chahiye:
+  - `Screenshot1-Landing Page.png`
+  - etc.
+
+👉 Agar phir bhi issue:
+→ folder bana ke daalo: `assets/`
+
+Then change:
+```md
+![Landing](assets/Screenshot1-Landing%20Page.png)
+````
+
