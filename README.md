@@ -138,20 +138,7 @@ Give it a ⭐ and feel free to fork!
 
 ````
 
----
 
-# 🔥 IMPORTANT (screenshots issue fix)
-
-👉 Agar images nahi aa rahi:
-- ensure files **same folder me ho README ke**
-- exact same name hona chahiye:
-  - `Screenshot1-Landing Page.png`
-  - etc.
-
-👉 Agar phir bhi issue:
-→ folder bana ke daalo: `assets/`
-
-Then change:
 ```md
 ![Landing](assets/Screenshot1-Landing%20Page.png)
 ````
